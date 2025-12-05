@@ -17,6 +17,39 @@ body {
     overflow-x: hidden;
 }
 
+/* Posters Section */
+.posters-section {
+    padding: 80px 5%;
+    background: #0d0f1a; 
+    text-align: center;
+}
+
+.posters-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 30px;
+}
+
+/* Single Poster Styling */
+.single-poster {
+    width: 100%;
+    height: 420px; 
+    object-fit: cover;
+    border-radius: 18px;
+    border: 3px solid rgba(0, 255, 170, 0.4);
+    transition: 0.3s;
+    box-shadow: 0 0 20px rgba(0, 255, 170, 0.3);
+}
+
+.single-poster:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 35px rgba(0, 255, 170, 0.6);
+}
+
+
+
 /* Animated Background */
 .bg-animation {
     position: fixed;
@@ -272,6 +305,9 @@ nav a:hover::after {
 /* ========================================
    Posters Section
    ======================================== */
+/* ========================================
+   Posters Section (Updated with Images)
+   ======================================== */
 .posters {
     padding: 100px 5%;
     background: rgba(26, 26, 46, 0.5);
@@ -299,43 +335,52 @@ nav a:hover::after {
     box-shadow: 0 20px 50px rgba(0, 255, 170, 0.4);
 }
 
+/* ⭐ NEW — Poster Image Styling */
+.poster-img {
+    width: 100%;
+    height: 230px;
+    object-fit: cover;
+    border-bottom: 2px solid rgba(0, 255, 170, 0.3);
+}
+
 .poster-content {
-    padding: 60px 40px;
-    min-height: 500px;
+    padding: 40px 30px;
+    min-height: 350px;
     display: flex;
     flex-direction: column;
     justify-content: center;
 }
 
+/* Background gradient optional */
 .poster-1 {
-    background: linear-gradient(135deg, rgba(0, 255, 170, 0.15), rgba(0, 100, 200, 0.15));
+    background: linear-gradient(135deg, rgba(0, 255, 170, 0.12), rgba(0, 100, 200, 0.12));
 }
 
 .poster-2 {
-    background: linear-gradient(135deg, rgba(0, 212, 255, 0.15), rgba(138, 43, 226, 0.15));
+    background: linear-gradient(135deg, rgba(0, 212, 255, 0.12), rgba(138, 43, 226, 0.12));
 }
 
 .poster-3 {
-    background: linear-gradient(135deg, rgba(255, 0, 170, 0.15), rgba(0, 212, 255, 0.15));
+    background: linear-gradient(135deg, rgba(255, 0, 170, 0.12), rgba(0, 212, 255, 0.12));
 }
 
 .poster h3 {
-    font-size: 32px;
-    margin-bottom: 20px;
+    font-size: 28px;
+    margin-bottom: 15px;
     color: #00ffaa;
 }
 
 .poster .feature-list {
     list-style: none;
-    margin: 20px 0;
+    margin: 15px 0;
 }
 
 .poster .feature-list li {
-    padding: 10px 0;
+    padding: 8px 0;
     color: #ffffff;
-    font-size: 18px;
+    font-size: 17px;
     position: relative;
-    padding-left: 30px;
+    padding-left: 28px;
 }
 
 .poster .feature-list li::before {
@@ -344,16 +389,69 @@ nav a:hover::after {
     left: 0;
     color: #00ffaa;
     font-weight: bold;
-    font-size: 22px;
+    font-size: 20px;
 }
 
 .poster .highlight {
     background: rgba(0, 255, 170, 0.2);
-    padding: 20px;
+    padding: 15px;
     border-radius: 10px;
-    margin-top: 20px;
+    margin-top: 15px;
     border-left: 4px solid #00ffaa;
 }
+
+
+/* ========================================
+   ⭐⭐⭐ TESTIMONIALS SECTION ⭐⭐⭐
+   ======================================== */
+
+.testimonials {
+    padding: 100px 5%;
+    background: rgba(10, 10, 20, 0.6);
+}
+
+.testimonials-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.testimonial-card {
+    background: linear-gradient(135deg, rgba(0, 255, 170, 0.08), rgba(0, 212, 255, 0.08));
+    padding: 30px;
+    border-radius: 15px;
+    border: 1px solid rgba(0, 255, 170, 0.25);
+    backdrop-filter: blur(10px);
+    transition: all 0.3s;
+}
+
+.testimonial-card:hover {
+    transform: translateY(-8px);
+    border-color: rgba(0, 255, 170, 0.6);
+    box-shadow: 0 15px 40px rgba(0, 255, 170, 0.25);
+}
+
+.testimonial-text {
+    font-size: 18px;
+    color: #d4d4d4;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    font-style: italic;
+}
+
+.client-name {
+    font-size: 20px;
+    font-weight: bold;
+    color: #00ffaa;
+}
+
+.client-role {
+    font-size: 16px;
+    color: #00d4ff;
+}
+
 
 /* ========================================
    Footer
